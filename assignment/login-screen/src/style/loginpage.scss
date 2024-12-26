@@ -1,0 +1,202 @@
+$primary-blue: #0066ff;
+$text-color: #333;
+$border-color: #e1e4e8;
+$bg-color: #f8f9fa;
+$github-black: #24292e;
+$bitbucket-blue: #0052cc;
+$azure-blue: #0078d4;
+$gitlab-orange: #fc6d26;
+
+.login-page {
+  overflow-x: hidden;
+  .row {
+    .ai-first {
+      padding-top: 158px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .detect-boxes {
+        position: relative;
+        .autofix-box {
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+          padding: 10px;
+          border-radius: 20px;
+          width: 400px;
+
+          .autofix-header {
+            border-bottom: 1px solid #e6e8f0;
+            display: flex;
+            align-items: center;
+            padding: 0 20px 20px 20px;
+
+            .brand-name {
+              font-size: 17px;
+              font-weight: 700;
+            }
+          }
+          .autofix-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            p {
+              margin: 0;
+              font-size: 16px;
+              font-weight: 700;
+              text-align: center;
+            }
+            span {
+              font-size: 13px;
+              font-weight: 400;
+            }
+          }
+        }
+        .issues-box {
+          padding: 10px 20px;
+          width: 200px;
+          position: absolute;
+          background-color: #ffffff;
+          top: 130px;
+          right: -20px;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          border-radius: 20px;
+
+          .issues-top {
+            display: flex;
+            justify-content: space-between;
+          }
+          .issues-week {
+            display: flex;
+            flex-direction: column;
+          }
+          .issues-fixed {
+            span {
+              font-size: 14px;
+              font-weight: 600;
+            }
+          }
+        }
+      }
+    }
+    .img {
+      padding-top: 110px;
+      img {
+        width: 40%;
+      }
+    }
+
+    // Variables
+
+    .login-container {
+      width: 100%;
+      max-width: 480px;
+      margin: 40px auto;
+      padding: 32px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      text-align: center;
+
+      .logo {
+        width: 48px;
+        height: 48px;
+        margin-bottom: 24px;
+      }
+
+      .welcome-text {
+        font-size: 24px;
+        font-weight: 600;
+        color: $text-color;
+        margin-bottom: 32px;
+      }
+
+      .hosting-options {
+        display: flex;
+        gap: 2px;
+        background: $bg-color;
+        padding: 4px;
+        border-radius: 8px;
+        margin-bottom: 32px;
+
+        .option-btn {
+          flex: 1;
+          padding: 12px;
+          border: none;
+          border-radius: 6px;
+          font-size: 16px;
+          font-weight: 500;
+          cursor: pointer;
+          background: transparent;
+          color: $text-color;
+
+          &.active {
+            background: $primary-blue;
+            color: #fff;
+          }
+
+          &:not(.active):hover {
+            background: rgba(0, 0, 0, 0.05);
+          }
+        }
+      }
+
+      .login-options {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin-bottom: 32px;
+
+        .login-button {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 12px;
+          padding: 12px;
+          border: 1px solid $border-color;
+          border-radius: 8px;
+          background: #fff;
+          color: $text-color;
+          font-size: 16px;
+          font-weight: 500;
+          cursor: pointer;
+          transition: background-color 0.2s, border-color 0.2s;
+
+          img {
+            width: 24px;
+            height: 24px;
+          }
+
+          &:hover {
+            background: $bg-color;
+            border-color: darken($border-color, 10%);
+          }
+        }
+      }
+
+      .privacy-notice {
+        font-size: 14px;
+        color: $text-color;
+
+        a {
+          color: $primary-blue;
+          text-decoration: none;
+          font-weight: 500;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  .row {
+    .colfirst {
+      display: none !important;
+    }
+  }
+}
